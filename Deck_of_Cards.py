@@ -5,7 +5,7 @@ class Card:
     allowed_suits = ['Hearts', 'Diamonds', 'Clubs', 'Spades']
     allowed_values = ['A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K']
 
-    def __init__(self, value, suit):
+    def __init__(self, suit, value):
         self.suit = suit
         self.value = value
         if self.suit not in Card.allowed_suits:
@@ -22,7 +22,7 @@ class Deck:
     def __init__(self):
         allowed_suits = ['Hearts', 'Diamonds', 'Clubs', 'Spades']
         allowed_values = ['A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K']
-        self.cards = [Card(value, suit) for value in allowed_values for suit in allowed_suits]
+        self.cards = [Card(suit, value) for value in allowed_values for suit in allowed_suits]
 
     def __repr__(self):
         return f'Deck of {self.count()} cards'
