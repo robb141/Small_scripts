@@ -64,7 +64,7 @@ def riverSizes(matrix):
     return river_lens
 
 
-matrix = [
+m = [
   [1, 0, 0, 1, 0],
   [1, 0, 1, 0, 0],
   [0, 0, 1, 0, 1],
@@ -72,4 +72,4 @@ matrix = [
   [1, 0, 1, 1, 0],
 ]
 
-print(riverSizes(matrix))
+print(riverSizes(m))
