@@ -1,0 +1,15 @@
+# Configuration
+config.ini
+!config.ini.gpg
+
+# Logs and reports
+review.log
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# PowerShell
+*.psm1
+.vscode/

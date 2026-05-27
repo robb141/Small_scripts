@@ -12,7 +12,7 @@ class Card:
             raise ValueError(f'Suit not recognized. Should be one of the {Card.allowed_suits}')
 
         if self.value not in Card.allowed_values:
-            raise ValueError(f'Value of the card not recognized. Should be one of the {Card.allowed_suits}')
+            raise ValueError(f'Value of the card not recognized. Should be one of the {Card.allowed_values}')
 
     def __repr__(self):
         return f'{self.value} of {self.suit}'

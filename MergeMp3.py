@@ -24,13 +24,11 @@ def main(argv):
 if __name__ == "__main__":
     inputdir, outputdir = main(sys.argv[1:])
     new_name = re.findall("^[^(]*", os.path.basename(inputdir))[0].strip()
+    new_file = b""
     for file in os.listdir(inputdir):
         print(file)
         with open(os.path.join(inputdir, file), "rb") as f:
-            if "new_file" in vars():
-                new_file += f.read()
-            else:
-                new_file = f.read()
+            new_file += f.read()
     with open(os.path.join(outputdir, f"{new_name}.mp3"), "wb") as f:
         f.write(new_file)
     print("Script finished.")

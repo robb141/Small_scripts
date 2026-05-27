@@ -18,7 +18,7 @@ def show_args(fn):
     def wrapper(*args, **kwargs):
         print('Here are the args: {}'.format(args))
         print('Here are the kwargs: {}'.format(kwargs))
-        fn(args, kwargs)
+        fn(*args, **kwargs)
     return wrapper
 
 

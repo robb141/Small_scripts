@@ -29,7 +29,7 @@ includes('abcd', 'b') # True
 includes('abcd', 'e') # False
 '''
 def includes(collection, value, start=0):
-    if type(collection) == dict:
+    if type(collection) is dict:
         return value in collection.values()
     else:
         return value in collection[start:]
