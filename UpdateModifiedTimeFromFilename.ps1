@@ -15,10 +15,10 @@ Use -WhatIf to preview changes without updating files.
 param(
     [Parameter()]
     [ValidateScript({ Test-Path -LiteralPath $_ -PathType Container })]
-    [string] $SourceFolder = "C:\Users\Robert\Downloads\Takeout\Fotky Google",
+    [string] $SourceFolder = "C:\path\to\source\folder",
 
     [Parameter()]
-    [string] $LogPath = "D:\SortMediaLogs\UpdateModifiedTimeFromFilename.log"
+    [string] $LogPath = "C:\path\to\log\file.log"
 )
 
 Set-StrictMode -Version Latest
